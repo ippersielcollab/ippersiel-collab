@@ -1,0 +1,7 @@
+# publication/ a son propre dépôt Git (déployé sur GitHub Pages sous
+# mg4costcorp-sys/ippersiel-collab, destiné à être transféré au compte
+# GitHub de Catherine plus tard) — on le garde hors du dépôt racine,
+# qui lui reste l'espace de travail privé du projet.
+publication/
+
+.DS_Store

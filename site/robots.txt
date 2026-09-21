@@ -1,0 +1,4 @@
+# Adresse d'aperçu : ne pas indexer, afin de ne pas concurrencer
+# le site définitif à ippersielcollab.ca
+User-agent: *
+Disallow: /

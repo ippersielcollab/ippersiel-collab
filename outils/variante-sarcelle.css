@@ -1,0 +1,14 @@
+/* =========================================================================
+   VARIANTE SARCELLE — Ippersiel Collab
+   Bascule la couleur vive de l'identité du orange au sarcelle.
+   Une seule déclaration : tout le site suit, parce que les appels à
+   l'action, le mot « avancer », le chiffre 10 000+ et les repères de
+   navigation passent tous par le même jeton.
+   Les signaux d'erreur du formulaire restent orange : ils doivent rester
+   distincts du sarcelle, qui signale au contraire la confirmation.
+   ========================================================================= */
+:root { --accent-vif: var(--sarcelle); }
+
+/* Le troisième chapitre d'expertise portait le orange. Sans lui, la
+   série devient sarcelle · minéral · sarcelle — une alternance franche
+   plutôt qu'une troisième couleur. */
