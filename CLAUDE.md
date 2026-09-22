@@ -139,11 +139,41 @@ GUIDE-MODIFICATIONS.md ← numéro de ligne exact de chaque texte dans index.htm
   (« Continue with GitHub » → wrangler deploy) est pour des Workers, pas pour
   un site statique — il fallait plutôt utiliser le lien discret « Need to use
   the legacy Pages workflow? Continue to Pages » sur l'écran de création.
-- **À faire ensuite** : Web3Forms (clé d'accès à générer avec
-  `ippersielcollab@gmail.com`), achat et connexion du domaine
-  `ippersielcollab.ca` (idéalement via Cloudflare Registrar sous ce même
-  compte), rôle Admin GitHub à confirmer pour `mg4costcorp-sys` (Write
-  suffit pour l'instant).
+- **Web3Forms branché et testé (même soir)** : compte créé sur
+  app.web3forms.com avec `ippersielcollab@gmail.com` (connexion par lien
+  courriel, pas de mot de passe séparé). Clé d'accès publique
+  `7f9b4d9f-9644-43ba-a7cf-68681670bd83` ajoutée dans
+  `site/index.html` (champ caché `access_key` du formulaire) et
+  `ENDPOINT_FORMULAIRE` réglé sur `https://api.web3forms.com/submit` dans
+  `site/js/site.js`. Testé avec un envoi réel (`success:true` confirmé par
+  l'API) avant de pousser.
+- **Photo mise à jour (même soir)** : nouvelle photo pro fournie par
+  Catherine, régénérée aux trois tailles (640/900/1067, JPG+WebP) à partir
+  du fichier source pleine résolution, rangé dans
+  `actifs-sources/catherine-ippersiel-portrait-pleine-resolution.jpg`.
+- **Palette simplifiée (même soir)** : Catherine a demandé le sarcelle vif
+  (`#00A7A0`) partout plutôt que la variante foncée (`#006F6B`) qui servait
+  sur les fonds pâles. Le jeton `--sarcelle-fonce` dans `site/css/site.css`
+  a été réglé à la même valeur que `--sarcelle` — donc les deux noms de
+  jeton existent toujours dans le code mais pointent vers la même couleur.
+- **Petit effet ajouté** : léger glissement + éclaircissement au survol des
+  lignes de service dans Expertise (`site/css/scroll-redesign.css`,
+  `.liste-services li:hover`). Un effet de parallax sur la photo À propos a
+  été essayé puis **retiré** à la demande de Catherine (elle ne le
+  voulait pas) — ne pas le réintroduire sans le lui redemander.
+- **Piège à retenir : mise en cache agressive du serveur d'aperçu local**
+  (`python3 -m http.server`) — après avoir modifié `site/css/*.css` ou
+  `site/js/site.js`, un simple rechargement de page dans le navigateur
+  intégré peut servir une version en cache. Il faut forcer le
+  rechargement des `<link>`/`<script>` avec un paramètre `?v=` unique
+  avant de vérifier visuellement, sinon on croit qu'un changement n'a pas
+  fonctionné alors qu'il a bien été écrit sur disque.
+- **À faire ensuite** : achat et connexion du domaine `ippersielcollab.ca`
+  (idéalement via Cloudflare Registrar sous le compte Cloudflare de
+  Catherine), mettre à jour l'URL du formulaire Web3Forms
+  (`ippersiel-collab.pages.dev` → `ippersielcollab.ca`) une fois le domaine
+  branché, rôle Admin GitHub à confirmer pour `mg4costcorp-sys` (Write
+  suffit pour l'instant), mettre à jour `GUIDE-MODIFICATIONS.md`.
 
 ## En attente de Catherine (non résolu, avant le pivot)
 
