@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var ENDPOINT_FORMULAIRE = '';
+  var ENDPOINT_FORMULAIRE = 'https://api.web3forms.com/submit';
   var mouvementReduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var entete = document.getElementById('entete');
   var progression = document.getElementById('progression');
