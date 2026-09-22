@@ -197,7 +197,7 @@ h1,h2,h3{font-weight:560}
  .realisation__fiche div{grid-template-columns:1fr;gap:.5rem}
  .approche__entete .titre-section{font-size:clamp(2.4rem,9.7vw,3.8rem);margin-bottom:2.5rem}
  .approche__mouvements li{grid-template-columns:1fr;gap:1.25rem;padding:2.3rem 0}
- .approche__mouvements h3{font-size:clamp(1.9rem,7.5vw,3rem);max-width:17ch}.approche__conclusion{padding:1.5rem 0 2.5rem;font-size:1rem}
+ .approche__mouvements h3{font-size:clamp(1.9rem,7.5vw,3rem);max-width:17ch;color:var(--orange)}.approche__conclusion{padding:1.5rem 0 2.5rem;font-size:1rem}
  .apropos{grid-template-columns:1fr;gap:2.5rem;padding-block:3rem 4rem}
  .apropos__portrait{position:relative;top:auto;max-width:29rem;width:100%;margin:auto;aspect-ratio:1067/1600}
  .apropos__nom{font-size:clamp(2.7rem,11vw,4.5rem);max-width:12ch}.apropos__bio{font-size:1.07rem;line-height:1.6}
