@@ -111,7 +111,8 @@ h1,h2,h3{font-weight:560}
 .approche__mouvements{display:block;padding:0 var(--marge)}
 .approche__mouvements::before,.approche__mouvements::after{display:none}
 .approche__mouvements li{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center;padding:clamp(2.5rem,5vw,5rem) 0;border-top:1px solid var(--trait)}
-.approche__mouvements h3{max-width:16ch;margin:0;font-size:clamp(2rem,3.4vw,3.3rem);line-height:1.08;letter-spacing:-.045em;color:var(--orange)}
+.approche__mouvements h3{max-width:16ch;margin:0;font-size:clamp(2rem,3.4vw,3.3rem);line-height:1.08;letter-spacing:-.045em}
+.approche__mouvements li:first-child h3{color:var(--orange)}
 .approche__mouvements p{max-width:36ch;font-size:clamp(1.1rem,1.6vw,1.35rem)}
 .approche__conclusion{max-width:none;margin:0 var(--marge);padding:2rem 0 4rem 52%;font-size:1.1rem}
 .approche__masque{display:none}
@@ -197,7 +198,7 @@ h1,h2,h3{font-weight:560}
  .realisation__fiche div{grid-template-columns:1fr;gap:.5rem}
  .approche__entete .titre-section{font-size:clamp(2.4rem,9.7vw,3.8rem);margin-bottom:2.5rem}
  .approche__mouvements li{grid-template-columns:1fr;gap:1.25rem;padding:2.3rem 0}
- .approche__mouvements h3{font-size:clamp(1.9rem,7.5vw,3rem);max-width:17ch;color:var(--orange)}.approche__conclusion{padding:1.5rem 0 2.5rem;font-size:1rem}
+ .approche__mouvements h3{font-size:clamp(1.9rem,7.5vw,3rem);max-width:17ch}.approche__conclusion{padding:1.5rem 0 2.5rem;font-size:1rem}
  .apropos{grid-template-columns:1fr;gap:2.5rem;padding-block:3rem 4rem}
  .apropos__portrait{position:relative;top:auto;max-width:29rem;width:100%;margin:auto;aspect-ratio:1067/1600}
  .apropos__nom{font-size:clamp(2.7rem,11vw,4.5rem);max-width:12ch}.apropos__bio{font-size:1.07rem;line-height:1.6}
