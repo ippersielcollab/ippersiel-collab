@@ -109,6 +109,42 @@ GUIDE-MODIFICATIONS.md ← numéro de ligne exact de chaque texte dans index.htm
   Pages) : action irréversible/externe, a demandé confirmation explicite de
   Matthieu avant d'être exécutée dans son propre Terminal.
 
+## Mise à jour du 21 septembre 2026 (soir) — comptes créés et site en ligne
+
+- **Compte GitHub de Catherine créé** : `github.com/ippersielcollab`, inscrit
+  avec `ippersielcollab@gmail.com`. Dépôt `ippersielcollab/ippersiel-collab`
+  (public), contenu de `site/` poussé dessus (branche `main`).
+- **Matthieu ajouté comme collaborateur** sur ce dépôt avec son compte
+  personnel `mg4costcorp-sys` (déjà authentifié via `gh` CLI sur son Mac —
+  c'est ce compte qui pousse le code au nom du projet).
+- **Compte Cloudflare de Catherine créé**, même courriel. Accès géré par
+  Matthieu via un **accès délégué Gmail** (Gmail → Paramètres → Comptes et
+  importation → Accorder l'accès à votre compte) plutôt qu'en partageant son
+  mot de passe Google — Matthieu lit sa boîte courriel depuis son propre
+  Gmail pour confirmer les inscriptions/liens de vérification.
+- **Site déployé et en ligne** : `ippersiel-collab.pages.dev`, branché sur
+  Cloudflare Pages (pas Workers), connecté au dépôt GitHub ci-dessus,
+  dossier de sortie = `site`. Republiera automatiquement à chaque `git push`
+  sur `main`.
+- **Problèmes rencontrés pendant la configuration Cloudflare (résolus)** :
+  la fenêtre « Verify your account » réapparaissait sans arrêt sur l'étape
+  « Create app », même après confirmation par courriel — bogue réel côté
+  Cloudflare (pas un problème local), qui a fini par se débloquer en collant
+  le lien de vérification directement dans la barre d'adresse du même onglet
+  que le tableau de bord (au lieu de cliquer depuis Gmail, qui ouvrait une
+  session/un compte différent). Aussi rencontré une erreur « Error
+  connecting to git account » lors de la première autorisation GitHub →
+  résolue en désinstallant puis réinstallant l'app « Cloudflare Workers and
+  Pages » depuis `github.com/settings/installations`. Le premier flux tenté
+  (« Continue with GitHub » → wrangler deploy) est pour des Workers, pas pour
+  un site statique — il fallait plutôt utiliser le lien discret « Need to use
+  the legacy Pages workflow? Continue to Pages » sur l'écran de création.
+- **À faire ensuite** : Web3Forms (clé d'accès à générer avec
+  `ippersielcollab@gmail.com`), achat et connexion du domaine
+  `ippersielcollab.ca` (idéalement via Cloudflare Registrar sous ce même
+  compte), rôle Admin GitHub à confirmer pour `mg4costcorp-sys` (Write
+  suffit pour l'instant).
+
 ## En attente de Catherine (non résolu, avant le pivot)
 
 1. ~~**Adresse LinkedIn exacte**~~ — **résolu** : le profil
