@@ -271,3 +271,34 @@ version de travail officielle. Plan de mise en ligne retenu :
   au moment de cette confusion — rappeler à Catherine/Matthieu que les
   aperçus qu'elle voit en ligne ne reflètent pas les changements tant qu'on
   n'a pas connecté Cloudflare Pages au nouveau dépôt et poussé.
+
+## Mise en ligne officielle — 2 octobre 2026
+
+- **Le site est en ligne sur `https://ippersielcollab.ca`** (et `www.`), HTTPS valide,
+  hébergé sur Cloudflare Pages (projet `ippersiel-collab`, compte Cloudflare de
+  Catherine). L'adresse `ippersiel-collab.pages.dev` reste active mais envoie
+  `noindex` (fichier `site/_headers`).
+- **Décision révisée : le domaine ET le courriel sont chez GoDaddy** (courriel
+  Microsoft 365 fourni par GoDaddy) — choix de Catherine, par simplicité. Le
+  plan « Cloudflare Registrar + Google Workspace » du 25 septembre est
+  abandonné. Matthieu agit dans GoDaddy via l'accès délégué de Catherine.
+- **DNS hébergé chez Cloudflare** (serveurs de noms `conrad.ns.cloudflare.com`
+  et `lovisa.ns.cloudflare.com`, changés dans GoDaddy). Raison : GoDaddy ne peut
+  pas faire pointer le domaine nu vers Pages. Les enregistrements Microsoft
+  (MX, SPF, autodiscover, DKIM selector1/2, DMARC, SRV et CNAME Lync, TXT
+  onmicrosoft) ont été recopiés dans Cloudflare, tous en « DNS only » (nuage
+  gris). **Ne jamais mettre ces CNAME de courriel en « Proxied ».**
+- **SPF corrigé** : `v=spf1 include:spf.protection.outlook.com include:secureserver.net -all`
+  (l'original n'incluait pas Microsoft).
+- **Web3Forms** : destinataire changé pour `catherine@ippersielcollab.ca` (la clé
+  `7f9b4d9f-...` n'a pas changé), Website URL = `ippersielcollab.ca`. Test réel
+  fait depuis le vrai domaine : succès.
+- **`robots.txt` bloquait Google** (réglage d'aperçu) : corrigé, `sitemap.xml`
+  ajouté. À ne pas remettre `Disallow: /`.
+- **Crédit** « Site conçu et réalisé par picbois47 » (lien picbois47.ca) dans le
+  pied de page de l'accueil et de la politique de confidentialité.
+- **`GUIDE-MODIFICATIONS.md` réécrit** (numéros de ligne, couleurs, méthode
+  `git push`).
+- **Reste à faire** : activer la signature DKIM dans le centre d'administration
+  Microsoft ; Google Search Console (ajouter le domaine, soumettre le sitemap) ;
+  rôle Admin GitHub de `mg4costcorp-sys` (Write suffit pour l'instant).
