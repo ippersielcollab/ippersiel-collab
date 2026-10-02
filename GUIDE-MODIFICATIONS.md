@@ -1,109 +1,97 @@
 # Guide de modification — site Ippersiel Collab
 
-Ce guide indique où se trouve chaque texte affiché sur le site.
+Ce guide indique où se trouve chaque texte et chaque réglage du site.
 Tous les textes publics sont dans **un seul fichier** : `site/index.html`.
-Ouvrez-le, allez à la ligne indiquée, changez le texte, enregistrez, rechargez
-la page dans le navigateur.
+Ouvrez-le, repérez le texte, changez-le, enregistrez.
 
-> Numéros de ligne à jour au 7 septembre 2026. Ils bougent si vous ajoutez ou
-> retirez des lignes : cherchez alors le texte lui-même avec la fonction
-> « Rechercher » de votre éditeur.
+> À jour au 2 octobre 2026. Dans `index.html`, plusieurs sections tiennent sur
+> une seule très longue ligne : le numéro de ligne vous amène à la bonne
+> section, puis utilisez « Rechercher » avec le texte de la colonne de gauche.
+> Si les numéros ont bougé, la recherche du texte reste la méthode la plus sûre.
 
-## Textes de la page
+## Textes de la page (`site/index.html`)
 
-| Texte | Ligne dans `site/index.html` |
+| Texte | Ligne |
 |---|---|
-| Surtitre du premier écran | 115 |
-| Titre principal — ligne 1 | 118 |
-| Titre principal — ligne 2 | 119 |
-| Titre principal — ligne 3 | 120 |
-| Texte d’introduction | 123 |
-| Repère « Ce que je fais » | 142 |
-| Titre de la section 02 | 144 |
-| Les quatre résultats | 153 |
-| Titre de la section Expertise | 167 |
-| Introduction de l’Expertise | 168 |
-| Expertise 01 — titre | 177 |
-| Expertise 02 — titre | 194 |
-| Expertise 03 — titre | 212 |
-| Repère de la section Besoins | 232 |
-| Première situation | 235 |
-| Titre des formes d’accompagnement | 250 |
-| Mention tarifaire | 271 |
-| Repère « Un projet concret » | 280 |
-| Titre de la réalisation | 281 |
-| Chiffre 10 000+ | 286 |
-| Nom du projet | 297 |
-| Accroche du projet | 298 |
-| Texte du projet (sacs de poubelle) | 304 |
-| Titre de l’approche | 321 |
-| Approche — étape 1 | 327 |
-| Approche — étape 2 | 333 |
-| Approche — étape 3 | 339 |
-| Conclusion de l’approche | 344 |
-| Nom de Catherine | 360 |
-| Titre professionnel | 51 |
-| Biographie — 1er paragraphe | 364 |
-| Lien LinkedIn — À propos | 371 |
-| Titre du contact | 383 |
-| Message de succès | 444 |
-| Message d’erreur | 445 |
-| Signature du pied de page | 459 |
+| Titre de l’onglet du navigateur et description pour Google | 6 à 7 |
+| Bouton « Démarrons la conversation » (menu, menu mobile, premier écran) | 22, 26, 32 |
+| Surtitre « Collaboration • Coordination • Communications » | 30 |
+| Titre principal « Clarifier / Coordonner / Rassembler… » | 31 |
+| Texte d’introduction « J’accompagne les organisations… » | 32 |
+| Titre « Donner une direction claire au projet. » | 37 |
+| Les deux blocs (noir et sarcelle) « Un projet avance… » | 38 |
+| Les quatre résultats « Des enjeux clarifiés… » | 39 |
+| Titre de l’Expertise « Trois leviers… » | 45 |
+| Expertise — Collaboration | 47 |
+| Expertise — Coordination | 48 |
+| Expertise — Communications | 49 |
+| « Quand le projet doit avancer » et ses six situations | 55 |
+| « Un accompagnement adapté… », les trois formes, la mention « Chaque mandat… » | 57 |
+| Réalisation « Bagage de vie » : titre, accroche, 10 000+, « Depuis 2019… » | 59 |
+| Approche « Comment je travaille avec vous » : les trois étapes et la conclusion | 61 |
+| À propos : nom, titre professionnel, biographie, lien LinkedIn | 63 |
+| Contact : titre, texte, formulaire, messages de succès et d’erreur | 65 à 66 |
+| Pied de page : coordonnées, LinkedIn, crédit « Site conçu et réalisé par picbois47 » | 69 |
 
-## Les couleurs
+Le titre professionnel de Catherine apparaît aussi à la ligne 15 (données pour
+Google). Si vous le changez à la ligne 63, changez-le là aussi.
 
-Tout part de la section « JETONS » de `site/css/site.css` :
+## Les couleurs (`site/css/site.css`, tout en haut, bloc `:root`)
 
 | Jeton | Rôle | Valeur |
 |---|---|---|
-| `--accent-vif` | accents éditoriaux : mot « avancer », chiffre 10 000+, soulignement du menu, troisième chapitre d’expertise | orange `#FF5A36` |
-| `--action` | boutons d’action pleins : « Parlons de votre projet », « Envoyer ma demande » | sarcelle `#00A7A0` |
-| `--sarcelle` | aplat de la section Formes d’accompagnement, repères de section | `#00A7A0` |
-| `--sarcelle-profond` | petit texte sarcelle sur fond clair, pour le contraste | `#00706C` |
+| `--sarcelle` | accent principal : verbes du titre, listes, chiffre 10 000+, bloc « Un accompagnement » | sarcelle vif `#00A7A0` |
+| `--sarcelle-fonce` | même usage sur fond pâle. **Réglé exprès à la même valeur que `--sarcelle`** (demande de Catherine : un seul sarcelle partout) | `#00A7A0` |
+| `--orange` | traits animés, « Collaboration » dans Expertise, « Comprendre le contexte », bouton d’envoi du formulaire | `#FF5A36` |
+| `--carbone` / `--mineral` | noir et blanc cassé | `#0A0A0A` / `#F2F3F5` |
 
-Changer une seule de ces lignes bascule tout le site. Les messages d’erreur du
-formulaire restent volontairement en orange, pour ne pas se confondre avec le
-sarcelle qui signale la confirmation.
+Changer une de ces valeurs change toutes les pages d’un coup.
 
 ## Ce qui se modifie ailleurs
 
 | Élément | Fichier |
 |---|---|
-| Couleurs, tailles de texte, espacements | `site/css/site.css`, section 2 « JETONS » |
-| Titre et description pour Google | `site/index.html`, lignes 6 à 8 |
-| Texte affiché lors d’un partage de lien | `outils/gabarit-image-partage.html` |
+| Mise en page, animations, défilement en « scènes » | `site/css/scroll-redesign.css` |
+| Comportements (menu, compteur, formulaire) | `site/js/site.js` |
+| Adresse d’envoi du formulaire (Web3Forms) | `site/js/site.js`, ligne 4 |
+| Clé d’accès Web3Forms | `site/index.html`, ligne 66, champ `access_key` |
+| Photo de Catherine | `site/assets/img/catherine-ippersiel-*.jpg` et `.webp` (trois tailles) |
 | Politique de confidentialité | `site/politique-confidentialite.html` |
 | Page affichée après l’envoi du formulaire | `site/merci.html` |
-| Adresse de réception du formulaire | `site/js/site.js`, première variable |
 
-## Mettre l’aperçu en ligne à jour
+## Mettre le site en ligne
 
-Dans l’onglet **Terminal**, une fois vos modifications enregistrées :
+Le site est hébergé sur **Cloudflare Pages** et se met à jour **tout seul** dès
+que les changements sont envoyés sur GitHub (dépôt `ippersielcollab/ippersiel-collab`).
+Il n’y a plus de dossier `publication/` à copier : l’ancienne méthode est abandonnée.
 
-```bash
-cp -R /Users/matthieugariepy/Projects/IppersielCollab/site/. /Users/matthieugariepy/Projects/IppersielCollab/publication/
-```
-
-Puis :
+Dans l’onglet **Terminal** (à côté de la conversation Claude Code, ouvert sur le
+dossier du projet), une fois vos modifications enregistrées :
 
 ```bash
-git add -A && git commit -m "Mise à jour" && git push
+git add -A && git commit -m "Description du changement" && git push
 ```
 
-L’adresse reste la même. Comptez une à deux minutes avant que le changement soit
-visible.
+Comptez une à deux minutes avant que le changement soit visible.
 
-## Ajouter l’adresse LinkedIn
+## Vérifier un changement avant de le publier
 
-Trois emplacements l’attendent, écrits et mis en commentaire. Dans
-`site/index.html`, cherchez `LIEN LINKEDIN` et `BOUTON LINKEDIN` :
+Dans le même Terminal :
 
-1. retirez la ligne `<!-- ... décommenter ...` au-dessus du lien;
-2. retirez la ligne `-->` en dessous;
-3. remplacez `ADRESSE-EXACTE` par l’identifiant du profil.
+```bash
+python3 -m http.server 8934 --directory site
+```
 
-## Ajouter une deuxième réalisation
+Puis ouvrez `http://localhost:8934` dans le navigateur. Si un changement de
+couleur ou de style semble ne pas s’appliquer, c’est presque toujours le
+navigateur qui garde l’ancienne version en mémoire : rechargez avec
+**⌘ + Maj + R**.
 
-Dans `site/index.html`, l’élément `<article class="projet">` peut être dupliqué :
-copiez-le entièrement, collez-le à la suite, puis remplacez le nom, l’accroche,
-les deux paragraphes et les trois lignes de la fiche.
+## Si les adresses changent
+
+- **Courriel du formulaire** : le formulaire envoie à l’adresse liée à la clé
+  Web3Forms. Pour changer le destinataire, créez une nouvelle clé sur
+  web3forms.com avec la nouvelle adresse et remplacez-la à la ligne 66.
+- **Domaine** : l’adresse de départ est `ippersiel-collab.pages.dev`. Le domaine
+  `ippersielcollab.ca` s’ajoute dans le tableau de bord Cloudflare Pages
+  (projet `ippersiel-collab` > Custom domains).
