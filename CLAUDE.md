@@ -310,5 +310,14 @@ version de travail officielle. Plan de mise en ligne retenu :
   `ippersielcollab.ca`. Facultatif : SPF et DMARC fonctionnent déjà. Ne pas
   toucher aux « paramètres de sécurité par défaut » de GoDaddy (impose
   Authenticator à Catherine).
-- **Reste à faire** : DKIM (voir ci-dessus) ; Google Search Console (ajouter le domaine, soumettre le sitemap) ;
-  rôle Admin GitHub de `mg4costcorp-sys` (Write suffit pour l'instant).
+- **Google Search Console (fait le 2 octobre)** : propriété « Domaine »
+  `ippersielcollab.ca` créée avec le compte Google de Matthieu
+  (`mg4costcorp@gmail.com`), vérifiée par un enregistrement TXT
+  `google-site-verification=prYP8xAZ...` ajouté dans Cloudflare (à ne pas
+  supprimer). Sitemap `https://ippersielcollab.ca/sitemap.xml` soumis (pour une
+  propriété Domaine, Google exige l'URL complète). Catherine pourra s'ajouter
+  comme propriétaire avec son compte Google en vérifiant le même
+  enregistrement TXT.
+- **Reste à faire** : DKIM (voir ci-dessus) ; vérifier dans quelques jours que le
+  sitemap est en « Success » dans Search Console ; rôle Admin GitHub de
+  `mg4costcorp-sys` (Write suffit pour l'instant).
