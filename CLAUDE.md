@@ -299,6 +299,16 @@ version de travail officielle. Plan de mise en ligne retenu :
   pied de page de l'accueil et de la politique de confidentialité.
 - **`GUIDE-MODIFICATIONS.md` réécrit** (numéros de ligne, couleurs, méthode
   `git push`).
-- **Reste à faire** : activer la signature DKIM dans le centre d'administration
-  Microsoft ; Google Search Console (ajouter le domaine, soumettre le sitemap) ;
+- **DKIM (reporté, besoin de Catherine)** : les CNAME `selector1/2._domainkey` sont
+  en place chez Cloudflare, mais la signature n'est pas activée côté Microsoft.
+  Le forfait « Microsoft 365 Messagerie de base » de GoDaddy ne permet pas
+  d'ouvrir l'administration Microsoft sans mot de passe depuis l'accès délégué
+  GoDaddy : « Centres d'administration avancés > Se connecter » demande un
+  compte Microsoft, et un compte déjà connecté (ex. picbois47) est réutilisé
+  par erreur. Il faut se connecter avec le compte `catherine@ippersielcollab.ca`
+  sur `security.microsoft.com/dkimv2` et activer l'interrupteur pour
+  `ippersielcollab.ca`. Facultatif : SPF et DMARC fonctionnent déjà. Ne pas
+  toucher aux « paramètres de sécurité par défaut » de GoDaddy (impose
+  Authenticator à Catherine).
+- **Reste à faire** : DKIM (voir ci-dessus) ; Google Search Console (ajouter le domaine, soumettre le sitemap) ;
   rôle Admin GitHub de `mg4costcorp-sys` (Write suffit pour l'instant).
