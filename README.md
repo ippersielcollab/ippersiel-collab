@@ -92,7 +92,7 @@ Laissée vide, cette variable garde le mode Netlify.
 ## 5. Régénérer l’image de partage
 
 L’image affichée quand le lien est partagé sur LinkedIn ou par message se trouve
-dans `site/assets/img/partage-ippersiel-collab.jpg`. Son gabarit est
+dans `site/assets/img/partage-ippersiel-collab-v2.jpg`. Son gabarit est
 `outils/gabarit-image-partage.html`.
 
 Pour la refaire après un changement de texte, dans l’onglet **Terminal** :
@@ -112,7 +112,7 @@ python3 -m http.server 8788
 3. Convertissez-la et remplacez l’ancienne :
 
 ```bash
-sips -z 630 1200 /tmp/partage.png -s format jpeg -s formatOptions 86 --out /Users/matthieugariepy/Projects/IppersielCollab/site/assets/img/partage-ippersiel-collab.jpg
+sips -z 630 1200 /tmp/partage.png -s format jpeg -s formatOptions 86 --out /Users/matthieugariepy/Projects/IppersielCollab/site/assets/img/partage-ippersiel-collab-v2.jpg
 ```
 
 Plus simple : demandez-le à Claude Code, qui refera le rendu et l’optimisation.
